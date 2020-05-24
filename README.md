@@ -1,6 +1,6 @@
 # Fake Job Posting classifier
 
-The data set consists of around 18k fake job postings out of which 800 are fake. There are various reasons a company can post a fake job opening.
+The data set consists of around 18k job postings out of which 800 are fake. There are various reasons a company can post a fake job opening.
 Following are some of the reasons explained:
 
 #### 1. Get information about the current talent: 
