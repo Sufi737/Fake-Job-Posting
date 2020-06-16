@@ -27,13 +27,19 @@ def home():
 def predict():
 
 	#taking in the user input
-    job_fields = [x for x in request.form.values()]
-    input_df = pd.DataFrame({'company_profile': job_fields[0], 'description': job_fields[1],'requirements': job_fields[2],'benefits': job_fields[3]})
-    # prediction = model.predict(final_features)
-
-    # output = round(prediction[0], 2)
-    output = 100
-    return render_template('index.html', prediction_text='Sales should be $ {}'.format(job_fields[0]))
+	job_fields = [x for x in request.form.values()]
+	input_df = pd.DataFrame({'company_profile': job_fields[0], 
+	'description': job_fields[1],'requirements': job_fields[2],'benefits': job_fields[3]}, index=[0])
+	test_vector = custom_pipeline(input_df)    
+	prediction = model.predict_proba(test_vector)
+	
+	if prediction[0][0] > prediction[0][1]:
+		op_string = str(int(prediction[0][0]*100)) + '% real'
+	else:
+		op_string = str(int(prediction[0][1]*100)) + '% fake'
+	
+	output = 100
+	return render_template('index.html', prediction_text='This job posting is '+op_string)
 
 
 # @app.route('/results',methods=['POST'])
