@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Job Posting Classifier</title>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Job Posting Fake or Real?</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+        Company Profile: <textarea id="profile" name="profile" rows="4" cols="50" required></textarea><br>
+        Job Description: <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+        Requirements: <textarea id="requirements" name="requirements" rows="4" cols="50" required></textarea><br>
+        Benefits: <textarea id="benefits" name="benefits" rows="4" cols="50" required></textarea><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
