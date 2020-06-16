@@ -29,7 +29,8 @@ def predict():
 	#taking in the user input
 	job_fields = [x for x in request.form.values()]
 	input_df = pd.DataFrame({'company_profile': job_fields[0], 
-	'description': job_fields[1],'requirements': job_fields[2],'benefits': job_fields[3]}, index=[0])
+	'description': job_fields[1],'requirements': job_fields[2],'benefits': job_fields[3], 'has_company_logo': int(job_fields[4]),
+	'telecommuting': int(job_fields[5]), 'has_questions': int(job_fields[6])}, index=[0])
 	test_vector = custom_pipeline(input_df)    
 	prediction = model.predict_proba(test_vector)
 	
