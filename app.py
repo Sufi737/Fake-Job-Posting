@@ -54,4 +54,6 @@ def predict():
 
 
 if __name__ == "__main__":
+    app.config['DEBUG'] = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run(debug=True)
