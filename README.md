@@ -12,6 +12,9 @@ After submitting the values, the model provides the percentage of how much is th
 
 ![output](ss3.png)
 
+XGBoost model is selected for classification purpose.
+ROC-AUC score was used to assess model performance.
+
 There are various reasons a company can post a fake job opening.
 Following are some of the reasons explained:
 
