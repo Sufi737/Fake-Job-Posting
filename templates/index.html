@@ -7,44 +7,60 @@
 </head>
 
 <body>
- <div class="login">
-	<h1>Job Posting Fake or Real?</h1>
+ <div class="form_body">
+  <h1>Job Posting Fake or Real</h1>
+
+  <div id="output_text">{{ prediction_text }}</div>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
 
-        Company Profile: <textarea id="profile" name="profile" rows="4" cols="50" required></textarea><br>
-        Job Description: <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
-        Requirements: <textarea id="requirements" name="requirements" rows="4" cols="50" required></textarea><br>
-        Benefits: <textarea id="benefits" name="benefits" rows="4" cols="50" required></textarea><br>
+        <div class = 'input_container'>
+          <div>Company Profile</div> <textarea id="profile" name="profile" rows="4" cols="50" required></textarea><br>
+        </div>
 
-        Has Company Logo? 
-        <select id="company_logo" name="company_logo">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-        <br>
+        <div class = 'input_container'>
+          <div>Job Description </div><textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+        </div>
 
-        Telecommuting allowed? 
-        <select id="telecommute" name="telecommute">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-        <br>
+        <div class = 'input_container'>
+         <div>Requirements</div><textarea id="requirements" name="requirements" rows="4" cols="50" required></textarea><br>
+        </div>
 
-        Has Questions? 
-        <select id="question" name="question">
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-        <br>
+        <div class = 'input_container'>
+          <div>Benefits</div><textarea id="benefits" name="benefits" rows="4" cols="50" required></textarea><br>  
+        </div>
+        
+        <div class = 'input_container'>
+          Has Company Logo? 
+          <select id="company_logo" name="company_logo">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <br>
+        </div>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+        <div class = 'input_container'>
+          Telecommuting allowed?
+          <select id="telecommute" name="telecommute">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <br>
+        </div>
+
+        <div class = 'input_container'>
+          Has Questions?
+          <select id="question" name="question">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <br>
+        </div>
+
+        <div><button id="submit_btn" type="submit" class="btn btn-primary btn-block btn-large">Check</button></div>
     </form>
 
-   <br>
-   <br>
-   {{ prediction_text }}
 
  </div>
 

@@ -1,44 +1,35 @@
-html { width: 100%; height:100%; overflow:hidden; }
-
-body { 
-	width: 100%;
-	height:100%;
-	font-family: 'Helvetica';
-	background: #000;
-	color: #fff;
-	font-size: 20px;
-	text-align:center;
-	letter-spacing:1.4px;
+body{
+	background-color: #000;
 }
 
 .form_body{
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	margin: -150px 0 0 -150px;
-	width:400px;
-	height:400px;
+	color: white;
+	width: 600px;
+	margin: 0 auto;
 }
 
-.form_body h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
-
-input { 
-	width: 100%; 
-	margin-bottom: 10px; 
-	background: rgba(0,0,0,0.3);
-	border: none;
-	outline: none;
-	padding: 10px;
-	font-size: 13px;
-	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-	border: 1px solid rgba(0,0,0,0.3);
-	border-radius: 4px;
-	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
-	-webkit-transition: box-shadow .5s ease;
-	-moz-transition: box-shadow .5s ease;
-	-o-transition: box-shadow .5s ease;
-	-ms-transition: box-shadow .5s ease;
-	transition: box-shadow .5s ease;
+.form_body h1{
+	text-align: center;
+	margin-bottom: 75px;
 }
-input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+.input_container{
+	position: relative;
+	text-align: center;
+	font-size: 21px;
+	margin-top: 25px;
+}
+
+#output_text{
+	text-align: center;
+	font-size: 25px;
+}
+
+#submit_btn{
+	height: 50px;
+	width: 100px;
+	position:relative;
+	margin-top: 20px;
+    top:50%; 
+    left:40%;
+}
