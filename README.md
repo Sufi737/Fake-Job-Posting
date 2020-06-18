@@ -4,6 +4,14 @@ The project aims to classify the real and the fake job postings posted by variou
 
 The model takes inputs such as company profile, job description, requirements and benefits to provide how much are the chances that the job posting is fake.
 
+![inputs 1](ss1.png)
+
+![inputs 2](ss2.png)
+
+After submitting the values, the model provides the percentage of how much is the job posting real or fake
+
+![output](ss3.png)
+
 There are various reasons a company can post a fake job opening.
 Following are some of the reasons explained:
 
